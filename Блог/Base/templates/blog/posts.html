@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block content %} {% for post in posts %}
+<div class="mb-5">
+  <h4>{{ post.title }}</h4>
+  <p>{{ post.content }}</p>
+  <span>{{ post.date }}</span>
+  <a href="/blog/post/{{ post.id }}" class="btn btn-primary">More</a>
+  <p>{{ post.author_user_name}}</p>
+</div>
+{% endfor %} {% endblock %}

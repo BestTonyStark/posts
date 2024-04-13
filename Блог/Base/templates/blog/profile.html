@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block content %} {% if user.is_authenticated %}
+<h2>{{ user.username }}</h2>
+<p>{{ user.first_name }} {{ user.last_name }}</p>
+<a href="/logout">Logout</a>
+{% else %}
+<h2>Вы не вошли в аккант</h2>
+<a href="/login">Войти</a>
+<a href="/signup">Зарегистрироваться</a>
+{% endif %} {% endblock content %}
